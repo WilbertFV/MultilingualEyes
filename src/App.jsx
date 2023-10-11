@@ -8,7 +8,7 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./utilities";
 
-const API_KEY = "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";
+const API_KEY = "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";
 
 const LanguageSelector = ({ onSelectLanguage }) => {
   const [language, setLanguage] = useState('en');
