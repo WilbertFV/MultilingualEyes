@@ -22,40 +22,53 @@ const translations = {
   },
   'car': {
     'en': 'car', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': '',
-    'fr': '',
-    'zh': ''
+    'es': 'auto',
+    'ru': 'машина',
+    'fr': 'voiture',
+    'zh': '车'
   },
   'motorcycle': {
     'en': 'motorcycle', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'motocicleta',
+    'ru': 'мотоцикл',
+    'fr': 'moto',
+    'zh': '摩托车'
+
   },
   'airplane': {
     'en': 'airplane', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'avión',
+    'ru': 'самолет',
+    'fr': 'avion',
+    'zh': '飞机'
   },
   'bus': {
     'en': 'bus', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'autobús',
+    'ru': 'автобус',
+    'fr': 'bus',
+    'zh': '公共汽车'
   },
   'train': {
     'en': 'train', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'tren',
+    'ru': 'тренироваться',
+    'fr': 'former',
+    'zh': '火车'
   },
   'truck': {
     'en': 'truck', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'camión',
+    'ru': 'грузовик',
+    'fr': 'camion',
+    'zh': '卡车'
   },
   'boat': {
     'en': 'boat', // It's often a good idea to also include the default language as a reference
     'es': '',
-    'ru': ''
+    'ru': '',
+    'fr': '',
+    'zh': ''
   },
   'traffic light': {
     'en': 'traffic light', // It's often a good idea to also include the default language as a reference
