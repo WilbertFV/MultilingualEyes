@@ -9,9 +9,11 @@ https://multilingual-eyes-app.vercel.app/
 Welcome to the Multilingual Eyes Multimodal Traveler's App repository! This innovative application represents a significant stride in enhancing navigational experiences using cutting-edge AI technologies. Designed with the needs of tourists and visually impaired individuals in mind, this app aims to provide an intuitive and inclusive way to interact with their surroundings.
 
 #Prototype Description
+
 The app is currently in its prototype phase, which serves as a proof-of-concept for the integration of multiple AI modalities, including vision and language processing. It embodies a user-centric design philosophy, focusing on practical reliability, inclusivity, and effectiveness for users with diverse abilities and language backgrounds.
 
 #Core Features
+
 Multimodal Interaction: The app integrates visual object detection using TensorFlow models and natural language processing capabilities.
 Real-time Object Detection: Utilizing the device's camera, the app identifies and labels objects in the user's environment in real-time.
 Multilingual Support: A key feature of this app is its ability to interact in multiple languages, including English, Spanish, Russian, French, and Chinese, making it accessible to a wider audience.
@@ -19,6 +21,7 @@ Voice and Text Interaction: Users can communicate with the app through both voic
 Responsive Design: The application is designed to be fully responsive, catering to various device types and screen sizes.
 
 #Technologies Used
+
 The Multilingual Eyes Multimodal Traveler’s App leverages a blend of advanced technologies to provide a seamless and inclusive navigational experience. Key technologies include:
 
 TensorFlow.js and coco-ssd Model: Utilizing TensorFlow.js, a powerful and flexible machine learning library for JavaScript, the app incorporates the coco-ssd model. This model is essential for real-time object detection, enabling the app to recognize and label various objects within the camera's view.
@@ -33,12 +36,15 @@ Custom Translation Functionality: The app features a custom translation module, 
 The combination of these technologies forms the backbone of the Multilingual Eyes Multimodal Traveler’s App, making it a versatile tool for navigation and exploration. The app stands out as a prototype that demonstrates the potential of integrating AI and machine learning in enhancing travel experiences, especially for tourists and individuals with visual impairments.
 
 #Implications of Technology Integration
+
 Based on our research and development, the integration of these technologies holds immense potential in various domains, particularly in enhancing accessibility and breaking language barriers in navigation and exploration contexts.
 
 #Contribution and Community Access
+
 We welcome contributions from the community to further develop and enhance the app's capabilities. The GitHub repository can be accessed at Multilingual Eyes, where you can find the source code, documentation, and contribution guidelines.
 
 #Disclaimer
+
 As this app is a prototype, it is important for users and contributors to understand that features and functionalities are subject to change, and the current version might not be fully optimized for all use cases.
 
 Join us in shaping the future of multimodal, multilingual interaction and navigation technology!
