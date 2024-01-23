@@ -23,12 +23,19 @@ Responsive Design: The application is designed to be fully responsive, catering 
 The Multilingual Eyes Multimodal Traveler’s App leverages a blend of advanced technologies to provide a seamless and inclusive navigational experience. Key technologies include:
 
 TensorFlow.js and coco-ssd Model: Utilizing TensorFlow.js, a powerful and flexible machine learning library for JavaScript, the app incorporates the coco-ssd model. This model is essential for real-time object detection, enabling the app to recognize and label various objects within the camera's view.
+
 React and Chat UI Kit: The app is built using React, a declarative, efficient, and flexible JavaScript library for building user interfaces. It integrates the Chat UI Kit for React, enhancing the chat interface's responsiveness and aesthetic appeal.
+
 Web Speech API: This API is instrumental in the app's voice-to-text and text-to-voice functionalities, providing a hands-free experience and aiding users with visual impairments. It supports the app's accessibility features, allowing users to interact with the app using voice commands.
+
 Multilingual Support: The app includes a language selection component, enabling users to choose from multiple languages, including English, Spanish, Russian, French, and Chinese. This multilingual support is crucial for enhancing the app's usability for a diverse user base.
+
 OpenAI GPT Integration: Leveraging OpenAI's GPT multilingual capabilities, the app offers conversational AI interactions. This integration allows for dynamic and intelligent responses to user queries, enhancing the overall user experience.
+
 Mobile Responsiveness: The app is designed with mobile responsiveness in mind, ensuring a consistent and user-friendly experience across various devices. This approach caters to the needs of travelers who predominantly use mobile devices for navigation.
+
 Canvas API for Drawing: The Canvas API is used to draw bounding boxes and labels around detected objects, providing visual cues to users about the objects recognized by the app.
+
 Custom Translation Functionality: The app features a custom translation module, which translates detected object labels into the user's selected language. This feature is essential for the app's multilingual capabilities, ensuring that users from different linguistic backgrounds can understand the information presented.
 
 The combination of these technologies forms the backbone of the Multilingual Eyes Multimodal Traveler’s App, making it a versatile tool for navigation and exploration. The app stands out as a prototype that demonstrates the potential of integrating AI and machine learning in enhancing travel experiences, especially for tourists and individuals with visual impairments.
