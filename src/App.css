@@ -1,88 +1,113 @@
+/* General Styles and Variables */
+:root {
+  --primary-color: #4a4e69; /* Dark grey-blue */
+  --secondary-color: #9a8c98; /* Soft purple */
+  --accent-color: #c9ada7; /* Soft pink */
+  --text-color: #f2e9e4; /* Off-white */
+  --font-family: 'Arial', sans-serif;
+}
+
+body, button, input, select {
+  font-family: var(--font-family);
+}
+
 .App {
   display: flex;
   flex-direction: row;
   height: 100vh;
   overflow: hidden; /* Prevents scrolling */
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
-/* Left Section- Webcam and Object detection */
+/* Webcam Section */
 .Webcam-section {
-  flex: 0 0 50%; /* Adjust this value to set the width of the left section */
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: rgb(81, 78, 78);
-  position: relative;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .Webcam-container {
   position: relative;
-  width: 100%; /* Adjusted to take the full width of the parent container */
-  height: auto; /* Adjusted to maintain aspect ratio */
-  max-width: 640px; /* Max width to maintain design */
-  max-height: 480px; /* Max height to maintain design */
+  width: 100%;
+  max-width: 640px;
+  max-height: 480px;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Right Section - Language Selector & Chat */
+/* Chat Section */
 .Right-section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: black;
-  color: white;
-}
-
-.Right-section > div {
-  padding: 20px;
+  background-color: var(--secondary-color);
 }
 
 .Chat-section {
-  flex: 1;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: #f5f5f5;
+  padding: 10px;
 }
 
 .Chat-output {
-  flex: 1;
-  padding: 20px;
+  flex-grow: 1;
   overflow-y: auto;
-  max-height: calc(100vh - 120px - 100px);  /* Adjusted to account for Chat-input height */
-  border: 1px solid #ccc;
-  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  max-height: 50vh; /* Set a max height for the chat output */
+}
+
+.language-selector {
+  align-self: center; /* Center the language selector */
+  margin: 10px 0; /* Add some space before and after the selector */
+}
+
+.language-dropdown {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  font-size: 1rem; /* Increase font size for better readability */
+  cursor: pointer;
 }
 
 .Chat-input {
-  padding: 20px;
-  border-top: 1px solid #ccc;
-  background-color: #f5f5f5;
-  flex-shrink: 0; /* Prevents the Chat-input from shrinking */
-}
-
-input[type="text"] {
-  width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+}
+
+/* Input and Button Styles */
+input[type="text"], button {
+  padding: 10px;
+  border: 1px solid var(--accent-color);
   border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: var(--text-color);
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: var(--secondary-color);
 }
 
-@media (max-width: 500px) {
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
   .App {
     flex-direction: column;
   }
+
   .Webcam-section, .Right-section {
-    flex: 1 0 100%; /* Takes the full width */
+    flex: 1;
+  }
+
+  .Chat-output {
+    max-height: 30vh; /* Adjust max height for mobile */
   }
 }
-

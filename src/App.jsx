@@ -1,4 +1,5 @@
 // Import dependencies
+// Import dependencies
 import { ChatContainer, MainContainer, Message, MessageInput, MessageList, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import * as cocossd from '@tensorflow-models/coco-ssd';
@@ -8,7 +9,7 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./utilities";
 
-const API_KEY = "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";
+const API_KEY = "YOUR_API_KEY_HERE";
 
 const LanguageSelector = ({ onSelectLanguage }) => {
   const [language, setLanguage] = useState('en');
@@ -32,9 +33,14 @@ const LanguageSelector = ({ onSelectLanguage }) => {
   );
 };
 
+const isMobileDevice = () => (
+  typeof window.orientation !== "undefined" || navigator.userAgent.indexOf('IEMobile') !== -1
+);
+
 const App = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const [facingMode, setFacingMode] = useState(isMobileDevice() ? 'environment' : 'user');
   const [net, setNet] = useState(null);
   const [selectedLanguage, setSelectedLanguage] = useState('en');
   const [detectedLabels, setDetectedLabels] = useState([]);
@@ -83,6 +89,13 @@ const App = () => {
       return () => clearInterval(interval);
     }
   }, [net, detect]);
+
+  const handleCameraError = (error) => {
+    if (isMobileDevice() && facingMode === 'environment' && error.name === 'OverconstrainedError') {
+      // If on a mobile device and we failed to access the back camera, retry with the front camera
+      setFacingMode('user');
+    }
+  };
 
   const getLanguageInstruction = () => {
     switch (selectedLanguage) {
@@ -207,6 +220,8 @@ async function processMessageToChatGPT(chatMessages, systemMessageContent) {
         <div className="Webcam-container">
           <Webcam
             ref={webcamRef}
+            videoConstraints={{ facingMode: facingMode }}
+            onUserMediaError={handleCameraError}
             style={{
               zIndex: 1,
               position: 'relative',
@@ -256,6 +271,3 @@ async function processMessageToChatGPT(chatMessages, systemMessageContent) {
 };
 
 export default App;
-
-//test
-

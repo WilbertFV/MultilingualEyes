@@ -1,1 +1,56 @@
-node_modules
+# Dependency directories
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Production build artifacts
+/build/
+/dist/
+
+# Environment files (if applicable)
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Editor/IDE files (if you use VSCode or WebStorm)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs and debugging (optional)
+logs/
+*.log
+*.log.*
+npm-debug.log*
+
+# macOS (optional)
+.DS_Store
+
+# Windows (optional)
+Thumbs.db
+ehthumbs.db
+
+# Webpack (if you use Webpack, otherwise, remove)
+.cache/
+
+# Automatically generated files (if applicable)
+*.pnp.js
+.pnp.js.map
+
+# Dependency directory used by tools like lerna (optional)
+lerna-debug.log
+lerna-debug.log.*
+
+# Yarn 2 (if you use Yarn 2, otherwise, remove)
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+!.pnp.*
+.vercel
