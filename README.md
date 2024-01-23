@@ -13,9 +13,13 @@ The app is currently in its prototype phase, which serves as a proof-of-concept 
 #Core Features
 
 Multimodal Interaction: The app integrates visual object detection using TensorFlow models and natural language processing capabilities.
+
 Real-time Object Detection: Utilizing the device's camera, the app identifies and labels objects in the user's environment in real-time.
+
 Multilingual Support: A key feature of this app is its ability to interact in multiple languages, including English, Spanish, Russian, French, and Chinese, making it accessible to a wider audience.
+
 Voice and Text Interaction: Users can communicate with the app through both voice commands and text input, enhancing accessibility.
+
 Responsive Design: The application is designed to be fully responsive, catering to various device types and screen sizes.
 
 #Technologies Used
