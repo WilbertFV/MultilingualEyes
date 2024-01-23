@@ -2,10 +2,8 @@ Use this link to try it out yourself!
 
 https://multilingual-eyes-app.vercel.app/ 
 
-
-#README for the Multilingual Eyes Multimodal Traveler's App
-
 #Overview
+
 Welcome to the Multilingual Eyes Multimodal Traveler's App repository! This innovative application represents a significant stride in enhancing navigational experiences using cutting-edge AI technologies. Designed with the needs of tourists and visually impaired individuals in mind, this app aims to provide an intuitive and inclusive way to interact with their surroundings.
 
 #Prototype Description
