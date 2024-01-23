@@ -1,6 +1,6 @@
 const translations = {
   'cell phone': {
-    'en': 'cellphone',
+    'en': 'cell phone',
     'es': 'celular',
     'ru': 'сотовый телефон',
     'fr': 'téléphone portable',
@@ -65,365 +65,500 @@ const translations = {
   },
   'boat': {
     'en': 'boat', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': '',
-    'fr': '',
-    'zh': ''
+    'es': 'bote',
+    'ru': 'лодка',
+    'fr': 'bateau',
+    'zh': '船'
   },
   'traffic light': {
     'en': 'traffic light', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'semáforo',
+    'ru': 'светофор',
+    'fr': 'feu de circulation',
+    'zh': '红绿灯'
   },
   'fire hydrant': {
     'en': 'fire hydrant', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'boca de incendio',
+    'ru': 'пожарный гидрант',
+    'fr': 'bouche d`incendie',
+    'zh': '消防栓'
   },
   'stop sign': {
     'en': 'stop sign', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'señal de stop',
+    'ru': 'знак СТОП',
+    'fr': 'panneau stop',
+    'zh': '停止标志'
   },
   'parking meter': {
     'en': 'parking meter', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'parquímetro',
+    'ru': 'счетчик на стоянке',
+    'fr': 'parcmètre',
+    'zh': '停车收费表'
   },
   'bench': {
     'en': 'bench', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'banco',
+    'ru': 'лавка',
+    'fr': 'banc',
+    'zh': '长椅'
   },
   'bird': {
     'en': 'bird', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'pájaro',
+    'ru': 'птица',
+    'fr': 'oiseau',
+    'zh': '鸟'
   },
   'cat': {
     'en': 'cat', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'gato',
+    'ru': 'кот',
+    'fr': 'chat',
+    'zh': '猫'
   },
   'dog': {
     'en': 'dog', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'perro',
+    'ru': 'собака',
+    'fr': 'chien',
+    'zh': '狗'
   },
   'horse': {
     'en': 'horse', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'caballo',
+    'ru': 'лошадь',
+    'fr': 'cheval',
+    'zh': '马'
   },
   'sheep': {
     'en': 'sheep', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'oveja',
+    'ru': 'овца',
+    'fr': 'mouton',
+    'zh': '羊'
   },
   'cow': {
     'en': 'cow', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'vaca',
+    'ru': 'корова',
+    'fr': 'vache',
+    'zh': '奶牛'
   },
   'elephant': {
     'en': 'elephant', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'elefante',
+    'ru': 'слон',
+    'fr': 'éléphant',
+    'zh': '大象'
   },
   'bear': {
     'en': 'bear', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'oso',
+    'ru': 'медведь',
+    'fr': 'ours',
+    'zh': '熊'
   },
   'zebra': {
     'en': 'zebra', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'cebra',
+    'ru': 'зебра',
+    'fr': 'zèbre',
+    'zh': '斑马'
   },
   'giraffe': {
     'en': 'giraffe', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'jirafa',
+    'ru': 'жирафа',
+    'fr': 'girafe',
+    'zh': '长颈鹿'
   },
   'backpack': {
     'en': 'backpack', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'mochila',
+    'ru': 'рюкзак',
+    'fr': 'sac à dos',
+    'zh': '背包'
   },
   'umbrella': {
     'en': 'umbrella', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'paraguas',
+    'ru': 'зонтик',
+    'fr': 'parapluie',
+    'zh': '伞'
   },
   'handbag': {
     'en': 'handbag', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'bolsa',
+    'ru': 'сумочка',
+    'fr': 'Sac à main',
+    'zh': '手提包'
   },
   'tie': {
     'en': 'tie', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'la corbata',
+    'ru': 'галстук',
+    'fr': 'la cravate',
+    'zh': '领带'
   },
   'suitcase': {
     'en': 'suitcase', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'maleta',
+    'ru': 'чемодан',
+    'fr': 'la valise',
+    'zh': '手提箱'
   },
   'frisbee': {
     'en': 'frisbee', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'disco volador',
+    'ru': 'фрисби',
+    'fr': 'frisbee',
+    'zh': '飞盘'
   },
   'skis': {
     'en': 'skis', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'esquís',
+    'ru': 'лыжи',
+    'fr': 'des skis',
+    'zh': '滑雪板'
   },
   'snowboard': {
     'en': 'snowboard', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'snowboard',
+    'ru': 'сноуборд',
+    'fr': 'snowboard',
+    'zh': '滑雪板'
   },
   'sports ball': {
     'en': 'sports ball', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'pelota deportiva',
+    'ru': 'спортивный мяч',
+    'fr': 'ballon de sport',
+    'zh': '运动球'
   },
   'kite': {
     'en': 'kite', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'cometa',
+    'ru': 'летающий змей',
+    'fr': 'cerf-volant',
+    'zh': '风筝'
   },
   'baseball bat': {
     'en': 'baseball bat', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'bate de béisbol',
+    'ru': 'бейсбольная бита',
+    'fr': 'batte de baseball',
+    'zh': '棒球棒'
   },
   'baseball glove': {
     'en': 'baseball glove', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'guante de béisbol',
+    'ru': 'бейсбольная перчатка',
+    'fr': 'gant de baseball',
+    'zh': '棒球手套'
   },
   'skateboard': {
     'en': 'skateboard', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'patineta',
+    'ru': 'скейтборд',
+    'fr': 'planche à roulette',
+    'zh': '滑板'
   },
   'surfboard': {
     'en': 'surfboard', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'tabla de surf',
+    'ru': 'доска для серфинга',
+    'fr': 'planche de surf',
+    'zh': '冲浪板'
   },
   'tennis racket': {
     'en': 'tennis racket', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'raqueta de tenis',
+    'ru': 'теннисная ракетка',
+    'fr': 'raquette de tennis',
+    'zh': '网球拍'
   },
   'bottle': {
     'en': 'bottle', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'botella',
+    'ru': 'бутылка',
+    'fr': 'bouteille',
+    'zh': '瓶子'
   },
   'wine glass': {
     'en': 'wine glass', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'Copa de vino',
+    'ru': 'бокал для вина',
+    'fr': 'verre de vin',
+    'zh': '红酒杯'
   },
   'cup': {
     'en': 'cup', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'taza',
+    'ru': 'чашка',
+    'fr': 'tasse',
+    'zh': '杯子'
   },
   'fork': {
     'en': 'fork', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'tenedor',
+    'ru': 'вилка',
+    'fr': 'fourchette',
+    'zh': '叉'
   },
   'knife': {
     'en': 'knife', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'cuchillo',
+    'ru': 'нож',
+    'fr': 'couteau',
+    'zh': '刀'
   },
   'spoon': {
     'en': 'spoon', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'cuchara',
+    'ru': 'ложка',
+    'fr': 'cuillère',
+    'zh': '勺子'
   },
   'bowl': {
     'en': 'bowl', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'bol',
+    'ru': 'чаша',
+    'fr': 'bol',
+    'zh': '碗'
   },
   'banana': {
     'en': 'banana', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'banana',
+    'ru': 'банан',
+    'fr': 'banane',
+    'zh': '香蕉'
   },
   'apple': {
     'en': 'apple', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'manzana',
+    'ru': 'яблоко',
+    'fr': 'pomme',
+    'zh': '苹果'
   },
   'sandwich': {
     'en': 'sandwich', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'sándwich',
+    'ru': 'бутерброд',
+    'fr': 'sandwich',
+    'zh': '三明治'
   },
   'orange': {
     'en': 'orange', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'naranja',
+    'ru': 'апельсин',
+    'fr': 'orange',
+    'zh': '橙子'
   },
   'broccoli': {
     'en': 'broccoli', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'brócoli',
+    'ru': 'брокколи',
+    'fr': 'brocoli',
+    'zh': '西兰花'
   },
   'carrot': {
     'en': 'carrot', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'zanahoria',
+    'ru': 'морковь',
+    'fr': 'carotte',
+    'zh': '胡萝卜'
   },
   'hot dog': {
     'en': 'hot dog', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'Hot dog',
+    'ru': 'хот-дог',
+    'fr': 'Hot-dog',
+    'zh': '热狗'
   },
   'pizza': {
     'en': 'pizza', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'pizza',
+    'ru': 'пицца',
+    'fr': 'pizza',
+    'zh': '比萨'
   },
   'donut': {
     'en': 'donut', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'rosquilla',
+    'ru': 'пончик',
+    'fr': 'Donut',
+    'zh': '油炸圈饼'
   },
   'cake': {
     'en': 'cake', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'pastel',
+    'ru': 'торт',
+    'fr': 'gâteau',
+    'zh': '蛋糕'
   },
   'chair': {
     'en': 'chair', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'silla',
+    'ru': 'стул',
+    'fr': 'chaise',
+    'zh': '椅子'
   },
   'couch': {
     'en': 'couch', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'sofá',
+    'ru': 'диван',
+    'fr': 'canapé',
+    'zh': '长椅'
   },
   'potted plant': {
     'en': 'potted plant', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'planta en maceta',
+    'ru': 'растение в горшке',
+    'fr': 'plante en pot',
+    'zh': '盆栽'
   },
   'bed': {
     'en': 'bed', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'cama',
+    'ru': 'кровать',
+    'fr': 'lit',
+    'zh': '床'
   },
   'dining table': {
     'en': 'dining table', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'comedor',
+    'ru': 'обеденный стол',
+    'fr': 'table à manger',
+    'zh': '餐桌'
   },
   'toilet': {
     'en': 'toilet', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'baño',
+    'ru': 'туалет',
+    'fr': 'toilettes',
+    'zh': '洗手间'
   },
   'tv': {
     'en': 'tv', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'televisor',
+    'ru': 'телевидение',
+    'fr': 'la télé',
+    'zh': '电视'
   },
   'laptop': {
     'en': 'laptop', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'computadora portátil',
+    'ru': 'ноутбук',
+    'fr': 'ordinateur portable',
+    'zh': '笔记本电脑'
   },
   'mouse': {
     'en': 'mouse', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'el ratón',
+    'ru': 'мышь',
+    'fr': 'souris',
+    'zh': '鼠标'
   },
   'remote': {
     'en': 'remote', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'remoto',
+    'ru': 'удаленный',
+    'fr': 'télécommande',
+    'zh': '偏僻的'
   },
   'keyboard': {
     'en': 'keyboard', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
-  },
-  'cell phone': {
-    'en': 'cell phone', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'teclado',
+    'ru': 'клавиатура',
+    'fr': 'clavier',
+    'zh': '键盘'
   },
   'microwave': {
     'en': 'microwave', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'microonda',
+    'ru': 'микроволновая печь',
+    'fr': 'four micro onde',
+    'zh': '微波'
   },
   'oven': {
     'en': 'oven', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'horno',
+    'ru': 'печь',
+    'fr': 'four',
+    'zh': '烤箱'
   },
   'toaster': {
     'en': 'toaster', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'tostadora',
+    'ru': 'тостер',
+    'fr': 'grille-pain',
+    'zh': '烤面包机'
   },
   'sink': {
     'en': 'sink', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'el fregadero',
+    'ru': 'сточная труба',
+    'fr': 'le lavabo',
+    'zh': '洗涤槽'
   },
   'refrigerator': {
     'en': 'refrigerator', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'refrigerador',
+    'ru': 'холодильник',
+    'fr': 'réfrigérateur',
+    'zh': '冰箱'
   },
   'book': {
     'en': 'book', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'libro',
+    'ru': 'книга',
+    'fr': 'livre',
+    'zh': '书'
   },
   'clock': {
     'en': 'clock', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'reloj',
+    'ru': 'Часы',
+    'fr': 'horloge',
+    'zh': '钟'
   },
   'vase': {
     'en': 'vase', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'florero',
+    'ru': 'ваза',
+    'fr': 'vase',
+    'zh': '花瓶'
   },
   'scissors': {
     'en': 'scissors', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'tijeras',
+    'ru': 'ножницы',
+    'fr': 'ciseaux',
+    'zh': '剪刀'
   },
   'teddy bear': {
     'en': 'teddy bear', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
-  }, 
+    'es': 'oso de peluche',
+    'ru': 'плюшевый мишка',
+    'fr': 'ours en peluche',
+    'zh': '玩具熊'
+  },
   'hair drier': {
     'en': 'hair drier', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'secador de pelo',
+    'ru': 'фен',
+    'fr': 'Sèche-cheveux',
+    'zh': '电吹风'
   },
   'toothbrush': {
     'en': 'toothbrush', // It's often a good idea to also include the default language as a reference
-    'es': '',
-    'ru': ''
+    'es': 'cepillo de dientes',
+    'ru': 'зубная щетка',
+    'fr': 'brosse à dents',
+    'zh': '牙刷'
   },
 };
 
