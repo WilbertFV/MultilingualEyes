@@ -1,18 +1,25 @@
 // Import dependencies
-// Import dependencies
-import { ChatContainer, MainContainer, Message, MessageInput, MessageList, TypingIndicator } from '@chatscope/chat-ui-kit-react';
-import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
-import * as cocossd from '@tensorflow-models/coco-ssd';
-import '@tensorflow/tfjs';
+import {
+  ChatContainer,
+  MainContainer,
+  Message,
+  MessageInput,
+  MessageList,
+  TypingIndicator,
+} from "@chatscope/chat-ui-kit-react";
+import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
+import * as cocossd from "@tensorflow-models/coco-ssd";
+import "@tensorflow/tfjs";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./utilities";
 
+
 const API_KEY = "YOUR_API_KEY_HERE";
 
 const LanguageSelector = ({ onSelectLanguage }) => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState("en");
 
   const handleLanguageChange = (event) => {
     const selectedLanguage = event.target.value;
@@ -33,23 +40,26 @@ const LanguageSelector = ({ onSelectLanguage }) => {
   );
 };
 
-const isMobileDevice = () => (
-  typeof window.orientation !== "undefined" || navigator.userAgent.indexOf('IEMobile') !== -1
-);
+const isMobileDevice = () =>
+  typeof window.orientation !== "undefined" ||
+  navigator.userAgent.indexOf("IEMobile") !== -1;
 
 const App = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
-  const [facingMode, setFacingMode] = useState(isMobileDevice() ? 'environment' : 'user');
+  const [facingMode, setFacingMode] = useState(
+    isMobileDevice() ? "environment" : "user"
+  );
   const [net, setNet] = useState(null);
-  const [selectedLanguage, setSelectedLanguage] = useState('en');
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [detectedLabels, setDetectedLabels] = useState([]);
   const [messages, setMessages] = useState([
     {
-      message: "Ask me anything! I can also let you know what I can see in the camera!",
+      message:
+        "Ask me anything! I can also let you know what I can see in the camera!",
       sentTime: "just now",
-      sender: "ChatGPT"
-    }
+      sender: "ChatGPT",
+    },
   ]);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -65,14 +75,13 @@ const App = () => {
     if (webcamRef.current && webcamRef.current.video.readyState === 4) {
       const video = webcamRef.current.video;
       const { videoWidth, videoHeight } = video;
-
       video.width = videoWidth;
       video.height = videoHeight;
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
 
       const obj = await net.detect(video);
-      const labels = obj.map(prediction => prediction.class);
+      const labels = obj.map((prediction) => prediction.class);
       setDetectedLabels(labels);
 
       const ctx = canvasRef.current.getContext("2d");
@@ -84,28 +93,30 @@ const App = () => {
   useEffect(() => {
     if (net) {
       detect(); // initial detection
-
       const interval = setInterval(detect, 500);
       return () => clearInterval(interval);
     }
   }, [net, detect]);
 
   const handleCameraError = (error) => {
-    if (isMobileDevice() && facingMode === 'environment' && error.name === 'OverconstrainedError') {
-      // If on a mobile device and we failed to access the back camera, retry with the front camera
-      setFacingMode('user');
+    if (
+      isMobileDevice() &&
+      facingMode === "environment" &&
+      error.name === "OverconstrainedError"
+    ) {
+      setFacingMode("user");
     }
   };
 
   const getLanguageInstruction = () => {
     switch (selectedLanguage) {
-      case 'es':
+      case "es":
         return "Respond in Spanish";
-      case 'ru':
+      case "ru":
         return "Respond in Russian";
-      case 'fr':
+      case "fr":
         return "Respond in French";
-      case 'zh':
+      case "zh":
         return "Respond in Chinese";
       default:
         return "Respond in English";
@@ -113,96 +124,136 @@ const App = () => {
   };
 
   const handleSend = async (message) => {
-    let systemMessageContent;
     const languageInstruction = getLanguageInstruction();
-
-    const visionKeywords = ["see", "detections", "views", "observes", "whats in the room", "view", "look", "watch", "spot", "detect", "percieve", "glimpse", "notice", "identify","spy", "spy","conceive", "make out", "identify", "grasp", "sight", "recognize", "observe"];
-    const messageIncludesVisionKeyword = visionKeywords.some(keyword => message.toLowerCase().includes(keyword));
-
+    const visionKeywords = [
+      "see",
+      "detections",
+      "views",
+      "observes",
+      "whats in the room",
+      "view",
+      "look",
+      "watch",
+      "spot",
+      "detect",
+      "percieve",
+      "glimpse",
+      "notice",
+      "identify",
+      "spy",
+      "conceive",
+      "make out",
+      "identify",
+      "grasp",
+      "sight",
+      "recognize",
+      "observe",
+    ];
+    const messageIncludesVisionKeyword = visionKeywords.some((keyword) =>
+      message.toLowerCase().includes(keyword)
+    );
     const userMessage = {
       message: message,
-      direction: 'outgoing',
-      sender: "user"
+      direction: "outgoing",
+      sender: "user",
     };
 
-    let newMessages = [...messages, userMessage];
-
+    let systemMessageContent;
     if (messageIncludesVisionKeyword) {
-        if (detectedLabels.length > 0) {
-          systemMessageContent = `(${languageInstruction} <strong>From my current understanding, I can detect the following objects: ${detectedLabels.join(', ')}.</strong>)`;
-        } else {
-            systemMessageContent = `${languageInstruction} I don't detect any specific objects right now.`;
-        }
+      systemMessageContent =
+        detectedLabels.length > 0
+          ? `${languageInstruction} | From my current understanding, I can detect the following objects: ${detectedLabels.join(
+              ", "
+            )}.`
+          : `${languageInstruction} | I don't detect any specific objects right now.`;
     } else {
-        systemMessageContent = `${languageInstruction} | User Asked: ${message}`;
+      systemMessageContent = `${languageInstruction} | User Asked: ${message}`;
     }
 
-    const chatGPTMessage = {
+    let newMessages = [
+      ...messages,
+      userMessage,
+      {
         message: systemMessageContent,
-        direction: 'incoming',
-        sender: "ChatGPT"
-    };
-
-    newMessages.push(chatGPTMessage);
+        direction: "incoming",
+        sender: "ChatGPT",
+      },
+    ];
     setMessages(newMessages);
 
     setIsTyping(true);
-    await processMessageToChatGPT(newMessages, systemMessageContent);
+    await processMessageToChatGPT(newMessages);
   };
 
-async function processMessageToChatGPT(chatMessages, systemMessageContent) {
-  let apiMessages = chatMessages.map((messageObject) => {
-    let role = messageObject.sender === "ChatGPT" ? "assistant" : "user";
-    return { role: role, content: messageObject.message }
-  });
+  async function processMessageToChatGPT(chatMessages) {
+    const assistantRoleDescription =
+      "You are a virtual travel assistant. Provide information based on detected objects and user queries without referencing visual capabilities or AI nature.";
+    let apiMessages = [{ role: "system", content: assistantRoleDescription }];
+    apiMessages.push(
+      ...chatMessages.map((messageObject) => ({
+        role: messageObject.sender === "ChatGPT" ? "assistant" : "user",
+        content: messageObject.message,
+      }))
+    );
 
-  const apiRequestBody = {
-    "model": "gpt-3.5-turbo",
-    "messages": [
-      { "role": "system", "content": systemMessageContent }, // Ensure this is the message being sent
-      ...apiMessages
-    ]
-  };
+    const apiRequestBody = {
+      model: "gpt-3.5-turbo",
+      messages: apiMessages,
+    };
 
     await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer " + API_KEY,
-        "Content-Type": "application/json"
+        Authorization: "Bearer " + API_KEY,
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(apiRequestBody)
-    }).then((data) => {
-      return data.json();
-    }).then((data) => {
-      setMessages([...chatMessages, {
-        message: data.choices[0].message.content,
-        sender: "ChatGPT"
-      }]);
-      setIsTyping(false);
-    });
+      body: JSON.stringify(apiRequestBody),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setMessages([
+          ...chatMessages,
+          {
+            message: data.choices[0].message.content,
+            sender: "ChatGPT",
+            direction: "incoming",
+          },
+        ]);
+        setIsTyping(false);
+      });
   }
 
   const [transcript, setTranscript] = useState("");
 
   const startListening = () => {
-    if (!('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)) {
-      console.error("Your browser does not support the Web Speech API. Please try another browser.");
+    if (
+      !("SpeechRecognition" in window || "webkitSpeechRecognition" in window)
+    ) {
+      console.error(
+        "Your browser does not support the Web Speech API. Please try another browser."
+      );
       return;
     }
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
-
+    const recognition = new (window.SpeechRecognition ||
+      window.webkitSpeechRecognition ||
+      window.mozSpeechRecognition ||
+      window.msSpeechRecognition)();
     recognition.onresult = (event) => {
-        const currentTranscript = event.results[0][0].transcript;
-        setTranscript(currentTranscript);
-        handleSend(currentTranscript);
+      const currentTranscript = event.results[0][0].transcript;
+      setTranscript(currentTranscript);
+      handleSend(currentTranscript);
     };
 
     recognition.start();
   };
 
   const speak = (text) => {
-    if (!('speechSynthesis' in window)) {
-      console.error("Your browser does not support the speechSynthesis API. Please try another browser.");
+    if (!("speechSynthesis" in window)) {
+      console.error(
+        "Your browser does not support the speechSynthesis API. Please try another browser."
+      );
       return;
     }
     if (text) {
@@ -224,20 +275,20 @@ async function processMessageToChatGPT(chatMessages, systemMessageContent) {
             onUserMediaError={handleCameraError}
             style={{
               zIndex: 1,
-              position: 'relative',
-              width: '100%',
-              height: '100%'
+              position: "relative",
+              width: "100%",
+              height: "100%",
             }}
           />
           <canvas
             ref={canvasRef}
             style={{
-              position: 'absolute',
+              position: "absolute",
               zIndex: 2,
               top: 0,
               left: 0,
-              width: '100%',
-              height: '100%'
+              width: "100%",
+              height: "100%",
             }}
           />
         </div>
@@ -250,7 +301,11 @@ async function processMessageToChatGPT(chatMessages, systemMessageContent) {
               <ChatContainer>
                 <MessageList
                   scrollBehavior="smooth"
-                  typingIndicator={isTyping ? <TypingIndicator content="Let me think..." /> : null}
+                  typingIndicator={
+                    isTyping ? (
+                      <TypingIndicator content="Let me think..." />
+                    ) : null
+                  }
                 >
                   {messages.map((message, i) => {
                     return <Message key={i} model={message} />;
@@ -261,7 +316,11 @@ async function processMessageToChatGPT(chatMessages, systemMessageContent) {
           </div>
           <div className="Chat-input">
             <button onClick={startListening}>Start Listening</button>
-            <button onClick={() => speak(messages[messages.length - 1]?.message)}>Read Last Message</button>
+            <button
+              onClick={() => speak(messages[messages.length - 1]?.message)}
+            >
+              Read Last Message
+            </button>
             <MessageInput placeholder="Type message here" onSend={handleSend} />
           </div>
         </div>
