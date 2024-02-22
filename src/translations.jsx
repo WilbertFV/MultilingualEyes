@@ -562,7 +562,6 @@ const translations = {
   },
 };
 
-
 export function translate(label, language) {
   // Try to find the translation based on the label and selected language
   if (translations[label] && translations[label][language]) {
