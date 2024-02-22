@@ -15,7 +15,6 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./utilities";
 
-
 const API_KEY = "YOUR_API_KEY_HERE";
 
 const LanguageSelector = ({ onSelectLanguage }) => {
