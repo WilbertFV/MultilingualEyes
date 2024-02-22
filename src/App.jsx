@@ -15,7 +15,6 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./utilities";
 
-
 const API_KEY = "YOUR_API_KEY_HERE";
 
 const LanguageSelector = ({ onSelectLanguage }) => {
@@ -160,8 +159,7 @@ const App = () => {
 
     let systemMessageContent;
     if (messageIncludesVisionKeyword) {
-      systemMessageContent =
-        detectedLabels.length > 0
+      systemMessageContent = detectedLabels.length > 0
           ? `${languageInstruction} | From my current understanding, I can detect the following objects: ${detectedLabels.join(
               ", "
             )}.`
