@@ -18,7 +18,7 @@ export const drawRect = (detections, ctx, selectedLanguage) => {
     const text = `${translatedText} ${Math.round(prediction['score'] * 100)}%`;
 
     // Adjustments to make the box smaller
-    const padding = 5;  // You can adjust this value as required
+    const padding = 2;  // You can adjust this value as required
     x += padding;
     y += padding;
     width -= 2 * padding;
