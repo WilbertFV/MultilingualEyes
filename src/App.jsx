@@ -16,7 +16,7 @@ import "./App.css";
 import { drawRect } from "./utilities";
 
 // Replace this API key with your actual key. In production, secure it appropriately.
-const API_KEY = "[YOUR API KEY HERE";
+const API_KEY = "[YOUR API KEY HERE]";
 
 const LanguageSelector = ({ onSelectLanguage }) => {
   const [language, setLanguage] = useState("en");
